@@ -1,0 +1,16 @@
+<dialog id="checkin-dialog" aria-labelledby="checkin-title">
+  <div class="dialog-title"><h2 id="checkin-title">签到记录</h2><button class="close-dialog" aria-label="关闭签到日历">×</button></div>
+  <div class="checkin-stats"><div><strong id="checkin-total">0</strong><span>累计签到 / 天</span></div><div><strong id="checkin-streak">0</strong><span>当前连续 / 天</span></div></div>
+  <div class="calendar-heading"><button id="calendar-previous" class="icon-button" aria-label="上个月">‹</button><h3 id="calendar-month"></h3><button id="calendar-next" class="icon-button" aria-label="下个月">›</button></div>
+  <div class="calendar-week" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div><div id="checkin-calendar" class="calendar-grid" role="list" aria-label="本月签到日期"></div>
+  <p class="calendar-note"><i></i> 已签到 <span>圈选为今天</span></p><button id="calendar-checkin" class="button calendar-sign">今日签到</button>
+
+</dialog>
+<dialog id="wallpaper-dialog" aria-labelledby="wallpaper-title">
+  <div class="dialog-title"><h2 id="wallpaper-title">首页壁纸</h2><button class="close-dialog" aria-label="关闭壁纸设置">×</button></div>
+  <div id="wallpaper-preview" class="wallpaper-preview" aria-label="当前壁纸预览"><span>Learn</span></div>
+  <div class="wallpaper-choices" role="group" aria-label="预设壁纸"><button data-wallpaper="winter" class="wallpaper-choice"><i class="swatch winter"></i>雪林</button><button data-wallpaper="dusk" class="wallpaper-choice"><i class="swatch dusk"></i>暮色</button><button data-wallpaper="mist" class="wallpaper-choice"><i class="swatch mist"></i>浅雾</button><button data-wallpaper="photo" class="wallpaper-choice" disabled><i id="photo-swatch" class="swatch photo"></i>本机图片</button></div>
+  <button id="wallpaper-pick" class="button light wallpaper-picker">从相册选择</button><input id="wallpaper-file" type="file" accept="image/*" aria-label="选择首页壁纸图片" hidden>
+  <div class="wallpaper-text-choice"><span>首页文字</span><button data-wallpaper-text="dark" class="button light small" aria-pressed="true">深色</button><button data-wallpaper-text="light" class="button light small" aria-pressed="false">浅色</button></div>
+  <p id="wallpaper-status" class="field-help" role="status">壁纸仅保存在本机，不会上传。</p><div class="dialog-actions"><button id="wallpaper-reset" class="button light">恢复默认</button><button class="button close-dialog">完成</button></div>
+</dialog>

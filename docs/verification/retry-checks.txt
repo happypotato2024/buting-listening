@@ -1,0 +1,8 @@
+INSTRUMENTATION_STATUS: pass=screen-retry-restarts-released-player
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: pass=notification-retry-restarts-released-player
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: pass=more-menu-stop-accessible
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: checks=["screen-retry-restarts-released-player","notification-retry-restarts-released-player","more-menu-stop-accessible"]
+INSTRUMENTATION_CODE: -1

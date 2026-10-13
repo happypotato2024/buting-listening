@@ -1,0 +1,3 @@
+INSTRUMENTATION_STATUS: pass=upgrade-preserves-favorites-stats-checkins-preferences-wallpaper
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_CODE: -1

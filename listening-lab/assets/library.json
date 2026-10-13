@@ -1,0 +1,297 @@
+{
+  "repo": "Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis",
+  "commit": "42fc6658e0b4a3dbae06755ba105d79169820576",
+  "license": "CC BY 4.0",
+  "tracks": [
+    {
+      "id": "cet6-licensed-2025-12-1",
+      "date": "2025.12",
+      "set": 1,
+      "audioHash": "7da0ff4ec10d0ac8fe1fc5aae6b79e05c64dd9a00557b2582e45f5f7e6f554e1",
+      "audioBytes": 37060775,
+      "audioPath": "CET6_2025.12/CET6_2025.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2025-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2025.12/CET6_2025.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2025-12-2",
+      "date": "2025.12",
+      "set": 2,
+      "audioHash": "902d5075868b33864cbbd3113ac1c4f4ee443d77b4886eee11792085f466de95",
+      "audioBytes": 25163452,
+      "audioPath": "CET6_2025.12/CET6_2025.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2025-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2025.12/CET6_2025.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2025-06-1",
+      "date": "2025.06",
+      "set": 1,
+      "audioHash": "4b0318d3b1cc65782cf7afa9dd528eb47a0bc4f86e35efd79003dbfd52831550",
+      "audioBytes": 18458994,
+      "audioPath": "CET6_2025.06/CET6_2025.06_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2025-06-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2025.06/CET6_2025.06_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2025-06-2",
+      "date": "2025.06",
+      "set": 2,
+      "audioHash": "7b5f38f7046286f2aaead206a7409a48c49c151e02376300796016d2e41e2a10",
+      "audioBytes": 18973052,
+      "audioPath": "CET6_2025.06/CET6_2025.06_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2025-06-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2025.06/CET6_2025.06_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2024-12-1",
+      "date": "2024.12",
+      "set": 1,
+      "audioHash": "fc55a9951fae6b300a077197f0ca403b7fd2f60dd3dbb7eeb0b212af07a29660",
+      "audioBytes": 70863497,
+      "audioPath": "CET6_2024.12/CET6_2024.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2024-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2024.12/CET6_2024.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2024-12-2",
+      "date": "2024.12",
+      "set": 2,
+      "audioHash": "a1e3b6fc1f5fd2c7cd5dc33cc76d1a222bd896048d537c1f7169b7e333f3d8ad",
+      "audioBytes": 27895942,
+      "audioPath": "CET6_2024.12/CET6_2024.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2024-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2024.12/CET6_2024.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2024-06-1",
+      "date": "2024.06",
+      "set": 1,
+      "audioHash": "8646a301b20859064a89d3e678e347222e8e7882b57f811407e7aef3b7d384d6",
+      "audioBytes": 19814544,
+      "audioPath": "CET6_2024.06/CET6_2024.06_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2024-06-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2024.06/CET6_2024.06_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2024-06-2",
+      "date": "2024.06",
+      "set": 2,
+      "audioHash": "d6fecaf3e9195c44acdcbb525c3c2c3b96c74d3266db30b61a4b30fba396ac36",
+      "audioBytes": 18757877,
+      "audioPath": "CET6_2024.06/CET6_2024.06_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2024-06-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2024.06/CET6_2024.06_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2023-12-1",
+      "date": "2023.12",
+      "set": 1,
+      "audioHash": "6052ef47f32eb1266662f3d79943788dcfb8ba32184a80b46d5300e02d179b18",
+      "audioBytes": 25037186,
+      "audioPath": "CET6_2023.12/CET6_2023.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2023-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2023.12/CET6_2023.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2023-12-2",
+      "date": "2023.12",
+      "set": 2,
+      "audioHash": "6b9a0d574b81d772eaf67c98934c9cb1ad0681495b7b75513851aafc01a816c7",
+      "audioBytes": 26782296,
+      "audioPath": "CET6_2023.12/CET6_2023.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2023-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2023.12/CET6_2023.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2023-06-1",
+      "date": "2023.06",
+      "set": 1,
+      "audioHash": "2cf3e68b98488d9f091bbf27aea208ee5567e2c0cbc8e2af0aae2d2e23b6dd48",
+      "audioBytes": 20119016,
+      "audioPath": "CET6_2023.06/CET6_2023.06_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2023-06-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2023.06/CET6_2023.06_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2023-06-2",
+      "date": "2023.06",
+      "set": 2,
+      "audioHash": "ec04e996cc9f92d13f6803fdc5c236f5c81402b5524ba301f0ca595df8e05b9c",
+      "audioBytes": 20119815,
+      "audioPath": "CET6_2023.06/CET6_2023.06_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2023-06-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2023.06/CET6_2023.06_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2022-12-1",
+      "date": "2022.12",
+      "set": 1,
+      "audioHash": "7a799da0363c97f1c4db6ae978458e69c665522e2ac4f90718dab40f4c0cb847",
+      "audioBytes": 26170096,
+      "audioPath": "CET6_2022.12/CET6_2022.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2022-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2022.12/CET6_2022.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2022-12-2",
+      "date": "2022.12",
+      "set": 2,
+      "audioHash": "b358d4161f111ec2f861af32f5e03646d596952a8bb2be7a62dd4ee02d5bc4bd",
+      "audioBytes": 25380872,
+      "audioPath": "CET6_2022.12/CET6_2022.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2022-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2022.12/CET6_2022.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2022-09-1",
+      "date": "2022.09",
+      "set": 1,
+      "audioHash": "4b67329de56971b4edf2b55eacbfe2369e778f15365b49f7717e67814385e4bd",
+      "audioBytes": 69537756,
+      "audioPath": "CET6_2022.09/CET6_2022.09_listening.mp3",
+      "recordingId": "cet6-licensed-2022-09-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2022.09/CET6_2022.09_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2022-06-1",
+      "date": "2022.06",
+      "set": 1,
+      "audioHash": "7611d4d1ca224da4915bd5fa311d275a25292ec091d852d0d5c8dcde99fadbf6",
+      "audioBytes": 27826088,
+      "audioPath": "CET6_2022.06/CET6_2022.06_listening.mp3",
+      "recordingId": "cet6-licensed-2022-06-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2022.06/CET6_2022.06_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2021-12-1",
+      "date": "2021.12",
+      "set": 1,
+      "audioHash": "522a4428af88c2526acd0d98f59c3439f9d1c838d7cd6157fc7d689ceb533efb",
+      "audioBytes": 15824660,
+      "audioPath": "CET6_2021.12/CET6_2021.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2021-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2021.12/CET6_2021.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2021-12-2",
+      "date": "2021.12",
+      "set": 2,
+      "audioHash": "792c6f988a514aad861f5a112a606f712a3973c7b7d1fcef3e3af7e148035da4",
+      "audioBytes": 22255505,
+      "audioPath": "CET6_2021.12/CET6_2021.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2021-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2021.12/CET6_2021.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2021-06-1",
+      "date": "2021.06",
+      "set": 1,
+      "audioHash": "58e3c657a59790f30c3c15f5028bc6017ae3688d315f47e66cb29cb5b3bd83d7",
+      "audioBytes": 27043456,
+      "audioPath": "CET6_2021.06/CET6_2021.06_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2021-06-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2021.06/CET6_2021.06_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2021-06-2",
+      "date": "2021.06",
+      "set": 2,
+      "audioHash": "3ed6ceae02bfebb6206d97bfdcb1249ef2834b60475829953a3836a2b406e571",
+      "audioBytes": 20426800,
+      "audioPath": "CET6_2021.06/CET6_2021.06_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2021-06-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2021.06/CET6_2021.06_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2020-12-1",
+      "date": "2020.12",
+      "set": 1,
+      "audioHash": "587e88b05d87859f178738e31387348b4cfe1b0c6f226a705c30ca9b0c21a11a",
+      "audioBytes": 12324508,
+      "audioPath": "CET6_2020.12/CET6_2020.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2020-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2020.12/CET6_2020.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2020-12-2",
+      "date": "2020.12",
+      "set": 2,
+      "audioHash": "8beed0a72cf37b15ff4cd272a4b637ee6914a6114b82058f1b83a45362e74280",
+      "audioBytes": 12802280,
+      "audioPath": "CET6_2020.12/CET6_2020.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2020-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2020.12/CET6_2020.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2020-09-1",
+      "date": "2020.09",
+      "set": 1,
+      "audioHash": "772b807d7a4c3ddb73805677d645a2757b802d20485d4981135c34d4fbdfaba8",
+      "audioBytes": 12742599,
+      "audioPath": "CET6_2020.09/CET6_2020.09_listening.m4a",
+      "recordingId": "cet6-licensed-2020-09-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2020.09/CET6_2020.09_listening.m4a"
+    },
+    {
+      "id": "cet6-licensed-2020-07-1",
+      "date": "2020.07",
+      "set": 1,
+      "audioHash": "641591f803a01bb9c72effb1540c90d3153045d2a6eda55eb22112ad87f6c1b3",
+      "audioBytes": 31192670,
+      "audioPath": "CET6_2020.07/CET6_2020.07_listening.m4a",
+      "recordingId": "cet6-licensed-2020-07-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2020.07/CET6_2020.07_listening.m4a"
+    },
+    {
+      "id": "cet6-licensed-2019-12-1",
+      "date": "2019.12",
+      "set": 1,
+      "audioHash": "d6528c4f3b576565401abca23068a67bcf1040462ad0cdab48494e4acfa572dc",
+      "audioBytes": 20536682,
+      "audioPath": "CET6_2019.12/CET6_2019.12_set1_listening.mp3",
+      "recordingId": "cet6-licensed-2019-12-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2019.12/CET6_2019.12_set1_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2019-12-2",
+      "date": "2019.12",
+      "set": 2,
+      "audioHash": "7e19002de199b1e17fdaf4d2a22a21ddfc5ee85ad76ed9d5a26d4d10cc9c2cd0",
+      "audioBytes": 20463287,
+      "audioPath": "CET6_2019.12/CET6_2019.12_set2_listening.mp3",
+      "recordingId": "cet6-licensed-2019-12-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2019.12/CET6_2019.12_set2_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2019-12-3",
+      "date": "2019.12",
+      "set": 3,
+      "audioHash": "ba0065f4a019d2bc3aa0770231f92a019fc785d1daa7f89cd52a2176b6718ed9",
+      "audioBytes": 13050674,
+      "audioPath": "CET6_2019.12/CET6_2019.12_set3_listening.mp3",
+      "recordingId": "cet6-licensed-2019-12-3",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2019.12/CET6_2019.12_set3_listening.mp3"
+    },
+    {
+      "id": "cet6-licensed-2019-06-1",
+      "date": "2019.06",
+      "set": 1,
+      "audioHash": "f74b7c31190797718e457076c8e488c91942749e8b3e8d267f5edae8e49d7c69",
+      "audioBytes": 20126238,
+      "audioPath": "CET6_2019.06/CET6_2019.06_set1_listening.m4a",
+      "recordingId": "cet6-licensed-2019-06-1",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2019.06/CET6_2019.06_set1_listening.m4a"
+    },
+    {
+      "id": "cet6-licensed-2019-06-2",
+      "date": "2019.06",
+      "set": 2,
+      "audioHash": "6233c4752a0fdd7aa7d4a3bfb7226946af2b4d09f6c9c18708c9a7072b5a1c6f",
+      "audioBytes": 20351183,
+      "audioPath": "CET6_2019.06/CET6_2019.06_set2_listening.m4a",
+      "recordingId": "cet6-licensed-2019-06-2",
+      "url": "https://media.githubusercontent.com/media/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis/42fc6658e0b4a3dbae06755ba105d79169820576/CET6_2019.06/CET6_2019.06_set2_listening.m4a"
+    }
+  ]
+}

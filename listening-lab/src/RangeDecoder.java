@@ -1,0 +1,35 @@
+package cn.buting.lab;
+import android.media.*;
+import android.os.SystemClock;
+import java.io.*;
+import java.nio.*;
+import java.security.MessageDigest;
+import java.util.*;
+import java.util.function.BooleanSupplier;
+import java.util.function.Consumer;
+import org.json.*;
+
+/** Preroll codec history, trim PCM by presentation timestamp, never seek MP3 bytes as time. */
+final class RangeDecoder {
+ static File home(){File f=new File(Diagnostics.app.getCacheDir(),"ranges");f.mkdirs();return f;}
+ static File decode(JSONObject state,long startMs,long endMs,BooleanSupplier cancel,Consumer<RemoteAudioSource> opened)throws Exception{
+  String key=Repository.hash((state.getString("sourceSha256")+":"+state.optString("metadataSha256")+":"+startMs+":"+endMs+":packet-pts-v3").getBytes("UTF-8"));File result=new File(home(),key+".pcm"),marker=new File(home(),key+".json");
+  AudioDecoder.check(cancel);if(result.exists()&&marker.exists()){try{JSONObject m=new JSONObject(new String(Diagnostics.read(marker),"UTF-8"));if(result.length()==m.optLong("bytes")&&result.length()>0&&result.length()%2==0&&Repository.hash(Diagnostics.read(result)).equals(m.optString("sha256"))){result.setLastModified(System.currentTimeMillis());Diagnostics.event("range_cache_hit","audioSha256",state.getString("sourceSha256"),"startMs",startMs,"endMs",endMs);return result;}}catch(IOException|JSONException damaged){Diagnostics.event("range_cache_invalid","file",result.getName());}result.delete();marker.delete();}
+  RemoteAudioSource source=new RemoteAudioSource(state,cancel);opened.accept(source);MediaExtractor extractor=new MediaExtractor();MediaCodec codec=null;File part=File.createTempFile(key,".partial",home());long begin=SystemClock.elapsedRealtime(),firstPts=-1;long frames=0;
+  try(OutputStream out=new BufferedOutputStream(new FileOutputStream(part))){long pre=Math.max(0,startMs-2000)*1000;PacketIndex packets=state.has("packetIndex")&&!state.isNull("packetIndex")?new PacketIndex(state.getJSONObject("packetIndex"),state.getLong("audioBytes")):null;int packetAt=packets==null?0:packets.begin(pre);MediaFormat format;String mime;
+   if(packets!=null){mime=packets.codec.equals("aac")?"audio/mp4a-latm":"audio/mpeg";format=MediaFormat.createAudioFormat(mime,packets.rate,packets.channels);format.setInteger(MediaFormat.KEY_ENCODER_DELAY,0);format.setInteger(MediaFormat.KEY_ENCODER_PADDING,0);if(packets.config!=null)format.setByteBuffer("csd-0",ByteBuffer.wrap(packets.config));}
+   else{extractor.setDataSource(source);int chosen=-1;format=null;for(int i=0;i<extractor.getTrackCount();i++){MediaFormat f=extractor.getTrackFormat(i);if(f.getString(MediaFormat.KEY_MIME).startsWith("audio/")){chosen=i;format=f;break;}}if(chosen<0)throw new IOException("没有可播放的音轨");extractor.selectTrack(chosen);extractor.seekTo(pre,MediaExtractor.SEEK_TO_PREVIOUS_SYNC);if(pre>0){format.setInteger(MediaFormat.KEY_ENCODER_DELAY,0);format.setInteger(MediaFormat.KEY_ENCODER_PADDING,0);}mime=format.getString(MediaFormat.KEY_MIME);if(mime.equals("audio/raw"))throw new IOException("在线仓库需使用 MP3 或 M4A");}
+   codec=MediaCodec.createDecoderByType(mime);codec.configure(format,null,null,0);codec.start();int rate=format.getInteger(MediaFormat.KEY_SAMPLE_RATE),channels=format.getInteger(MediaFormat.KEY_CHANNEL_COUNT),encoding=AudioDecoder.encoding(format);AudioDecoder.Resampler resampler=new AudioDecoder.Resampler(rate,channels,encoding,out);boolean inputEnd=false,outputEnd=false;MediaCodec.BufferInfo info=new MediaCodec.BufferInfo();long lastData=SystemClock.elapsedRealtime();
+   while(!outputEnd){AudioDecoder.check(cancel);if(!inputEnd){int input=codec.dequeueInputBuffer(10000);if(input>=0){ByteBuffer b=codec.getInputBuffer(input);b.clear();int n;long pts;if(packets!=null){if(packetAt>=packets.sizes.length){n=-1;pts=0;}else{n=packets.sizes[packetAt];pts=packets.pts(packetAt);byte[] packet=new byte[n];if(source.readAt(packets.positions[packetAt],packet,0,n)!=n)throw new IOException("音频帧不完整");b.put(packet);packetAt++;}}else{n=extractor.readSampleData(b,0);pts=extractor.getSampleTime();}if(n<0||pts>(endMs+500)*1000){codec.queueInputBuffer(input,0,0,0,MediaCodec.BUFFER_FLAG_END_OF_STREAM);inputEnd=true;}else{codec.queueInputBuffer(input,0,n,pts,0);if(packets==null)extractor.advance();}}}
+    int output=codec.dequeueOutputBuffer(info,10000);if(output==MediaCodec.INFO_OUTPUT_FORMAT_CHANGED){MediaFormat f=codec.getOutputFormat();rate=f.getInteger(MediaFormat.KEY_SAMPLE_RATE);channels=f.getInteger(MediaFormat.KEY_CHANNEL_COUNT);encoding=AudioDecoder.encoding(f);if(resampler.frames!=0)throw new IOException("播放中音频格式发生变化");resampler=new AudioDecoder.Resampler(rate,channels,encoding,out);}
+    else if(output>=0){if(info.size>0){lastData=SystemClock.elapsedRealtime();int sampleBytes=encoding==3?1:encoding==2?2:encoding==21?3:4,frameBytes=sampleBytes*channels,count=info.size/frameBytes;long pts=info.presentationTimeUs;int a=(int)Math.max(0,Math.min(count,Math.round((startMs*1000-pts)*rate/1000000.0))),b=(int)Math.max(0,Math.min(count,Math.round((endMs*1000-pts)*rate/1000000.0)));if(b>a){if(firstPts<0)firstPts=pts+Math.round(a*1000000.0/rate);ByteBuffer buf=codec.getOutputBuffer(output).duplicate();buf.position(info.offset+a*frameBytes);buf.limit(info.offset+b*frameBytes);resampler.feed(buf.slice());}if(pts+count*1000000L/rate>=endMs*1000)outputEnd=true;}
+     outputEnd|=(info.flags&MediaCodec.BUFFER_FLAG_END_OF_STREAM)!=0;codec.releaseOutputBuffer(output,false);}
+    if(SystemClock.elapsedRealtime()-lastData>30000)throw new IOException("在线音频解码超时");
+   }resampler.finish();out.flush();frames=resampler.outputFrames;long expected=(endMs-startMs)*16;if(frames<=0||Math.abs(frames-expected)>Math.max(80,expected/200))throw new IOException("音频区间不完整，联网后重试");AudioDecoder.check(cancel);
+  }catch(Exception e){part.delete();throw e;}finally{extractor.release();if(codec!=null){try{codec.stop();}catch(Exception ignored){}codec.release();}source.close();}
+  synchronized(RemoteAudioSource.CACHE_LOCK){if(result.exists())result.delete();if(!part.renameTo(result)){part.delete();throw new IOException("无法保存播放缓存");}Repository.atomic(marker,new JSONObject().put("bytes",result.length()).put("sha256",Models.hex(MessageDigest.getInstance("SHA-256").digest(Diagnostics.read(result)))).toString().getBytes("UTF-8"));trim(result);}
+  Diagnostics.event("range_decoded","audioSha256",state.getString("sourceSha256"),"startMs",startMs,"endMs",endMs,"firstPtsUs",firstPts,"frames",frames,"networkBytes",source.fetched,"elapsedMs",SystemClock.elapsedRealtime()-begin,"pcmFile",result.getName());return result;
+ }
+ static void trim(File keep){File[] files=home().listFiles((d,n)->n.endsWith(".pcm"));if(files==null)return;Arrays.sort(files,Comparator.comparingLong(File::lastModified));long total=0;for(File f:files)total+=f.length();for(File f:files){if(total<=32L*1024*1024)break;if(!f.equals(keep)&&f.delete()){total-=f.length();new File(f.getPath().replace(".pcm",".json")).delete();}}}
+ static void clear(){File[] files=home().listFiles();if(files!=null)for(File f:files)f.delete();}
+}

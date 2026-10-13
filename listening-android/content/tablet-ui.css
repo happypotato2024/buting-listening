@@ -1,0 +1,131 @@
+/* CSS viewport width is measured in logical pixels, independent of screen resolution. */
+.practice-controls, .practice-reader { display:contents; }
+@media (min-width:600px) {
+  :root { --nav:80px; --player:168px; }
+  main, body[data-view=progress] main { max-width:1160px; width:100%; padding-left:32px; padding-right:32px; }
+  .topbar, .home-view .topbar { height:72px; }
+  .brand, body[data-view=practice] .brand, .home-view .brand { font-size:20px; }
+  .icon-button { min-width:48px; min-height:48px; }
+  .topbar .import-button { margin-right:0; }
+  .button, .text-button, .mode-bar button, .close-dialog { min-height:48px; font-size:14px; }
+  .button { padding:10px 22px; }
+  .mode-bar { gap:12px; }
+  .track-heading h2 { font-size:20px; }
+  .track-heading p, .badge, .quiet-note, .swipe-hint, .panel-foot, .transcript-tools { font-size:12px!important; }
+  .transcript-tools { min-height:48px; }
+  .switch { min-height:44px; font-size:13px; }
+  .switch>span { width:38px; height:23px; }
+  .switch>span:after { width:17px; height:17px; }
+  .switch input:checked+span:after { transform:translateX(15px); }
+  .transcript { height:clamp(180px,calc(100dvh - 650px),700px); }
+  .sentence-translation, .review-content #review-translation { font-size:16px; }
+  .reader-top { padding:18px 26px 0; font-size:12px; }
+  .reader-top .section-label { font-size:10px; }
+  .transcript { padding-left:26px; padding-right:26px; }
+  .reader-nav { margin-top:16px; }
+  .favorite-button { min-width:48px; min-height:48px; }
+  .blind-panel, .empty { min-height:260px; height:auto; padding:36px; }
+  .blind-panel .sound-orb { width:72px; height:72px; }
+  .blind-panel p { font-size:14px; }
+  .player, .mobile-nav { max-width:none; width:100%; border-radius:0; padding-left:max(32px,calc((100vw - 1040px)/2)); padding-right:max(32px,calc((100vw - 1040px)/2)); }
+  .player { padding-top:12px; padding-bottom:12px; }
+  .player-title strong, .player-title small, .player-options select { font-size:13px; }
+  .player-options select { min-height:44px; max-width:140px; }
+  .player-center { width:100%; max-width:800px; justify-self:center; }
+  .seek-row { font-size:12px; }
+  .seek-row input { height:44px; }
+  .play-controls { max-width:460px; margin-top:0; }
+  .play-button { width:56px; height:56px; }
+  .icon-button small { top:20px; }
+  .mobile-nav button { font-size:12px; min-height:56px; }
+  .mobile-nav svg { width:28px; height:28px; }
+  .home-stage { height:calc(100dvh - 72px - var(--nav) - env(safe-area-inset-bottom)); max-width:900px; margin:auto; }
+  .home-check-area { padding-top:clamp(60px,15dvh,200px); }
+  .checkin-tile { width:206px; height:210px; border-radius:34px; }
+  .checkin-tile svg { width:34px; height:34px; }
+  .checkin-tile strong { font-size:24px; }
+  .checkin-tile>span { font-size:20px; }
+  .checkin-tile small { font-size:12px; }
+  .home-bottom { padding-bottom:32px; }
+  .home-summary, .home-caption { font-size:13px; }
+  .home-actions { gap:28px; }
+  .home-action { min-height:124px; padding:22px 26px; border-radius:20px; }
+  .home-action>strong { font-size:30px; }
+  .home-action strong span, .home-action>small { font-size:13px; }
+  .home-action small b { font-size:25px; }
+  .home-view .wallpaper-top { width:48px; height:48px; }
+  .library-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+  .library-card { padding:20px; }
+  .book-thumbnail { height:104px; }
+  .library-card h3 { font-size:17px; }
+  .library-card p { font-size:12px; }
+  .library-card .badge { font-size:11px; }
+  .library-actions { flex-wrap:wrap; }
+  .library-actions .button, .library-actions .text-button, .delete-track { min-height:48px; font-size:13px; }
+  .library-filters input, .library-filters select { min-height:48px; font-size:14px; }
+  .random-settings { min-height:52px; }
+  .random-settings>label, .random-settings select { font-size:14px; }
+  .random-settings select { min-height:48px; max-width:230px; }
+  .random-card { max-width:820px; padding:32px; margin:18px auto; }
+  .review-content { max-height:clamp(200px,calc(100dvh - 600px),650px); min-height:200px; padding:24px 26px; }
+  .review-controls .button { font-size:14px; }
+  body[data-view=progress] main { padding-bottom:calc(var(--nav) + env(safe-area-inset-bottom) + 32px); }
+  .my-header { height:108px; }
+  .my-header .my-back, .my-header-spacer { width:48px; }
+  .my-tabs button { min-height:48px; font-size:16px; padding:8px 24px; }
+  .my-section-heading h2 { font-size:20px; }
+  .my-text-button, .my-section-heading .my-text-button { min-height:44px; font-size:14px; padding:8px 12px; }
+  .my-plan-card, .my-overview, .my-calendar-card { padding:24px; }
+  .my-book { width:110px; min-width:110px; height:122px; }
+  .my-plan-info h3, .my-card-heading h3, .my-card-heading>strong { font-size:18px; }
+  .my-plan-info p, .my-plan-caption, .my-card-heading>span { font-size:13px; }
+  .my-plan-info>span { font-size:12px; }
+  .my-plan-footer { min-height:60px; font-size:16px; }
+  .my-metrics { grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; margin-top:24px; }
+  .my-metrics>div>span { font-size:13px; }
+  .my-metrics strong { font-size:34px; }
+  .my-metrics small, .my-stat-note { font-size:11px; }
+  .my-week-labels { font-size:11px; }
+  .my-week-days { font-size:15px; }
+  .my-week-days>span { width:36px; height:36px; }
+  .my-favorites>summary { min-height:64px; font-size:16px; }
+  .my-preference-card { padding:0 24px; }
+  .my-setting-row { min-height:78px; font-size:16px; }
+  .my-setting-row select, .my-setting-value { min-height:44px; font-size:14px; }
+  .my-setting-value { display:flex; align-items:center; gap:6px; }
+  .my-setting-row small, .my-local-note { font-size:12px; }
+  .favorite-row .button { min-height:48px; font-size:13px; }
+  dialog { max-width:680px; padding:32px; }
+  .calendar-heading button { min-width:48px; min-height:48px; }
+  .wallpaper-choice { min-height:90px; font-size:13px; }
+}
+@media (min-width:900px) {
+  #my-study { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 24px; grid-template-areas:'plan-title stats-title' 'plan stats' 'calendar favorites' 'note note'; align-items:start; }
+  #my-study>.my-section-heading:first-child { grid-area:plan-title; }
+  #my-study>.my-section-heading:nth-child(3) { grid-area:stats-title; }
+  .my-plan-card { grid-area:plan; }
+  .my-overview { grid-area:stats; min-height:100%; }
+  .my-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+  .my-calendar-card { grid-area:calendar; }
+  .my-favorites { grid-area:favorites; }
+  #my-study>.my-local-note { grid-area:note; }
+  #my-preferences { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 24px; align-items:start; }
+  #my-preferences>.my-local-note { grid-column:1/-1; }
+  .library-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+}
+@media (min-width:600px) and (max-width:719px) {
+  .library-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .my-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (min-width:900px) and (min-height:600px) {
+  #view-practice .page-heading { padding:12px 0 16px; }
+  #view-practice .listening-panel { display:grid; grid-template-columns:260px minmax(0,1fr); gap:12px 24px; align-items:start; }
+  .practice-controls, .practice-reader { display:block; min-width:0; }
+  .practice-controls { max-height:calc(100dvh - 425px); overflow:auto; scrollbar-width:thin; }
+  #view-practice .track-heading { flex-wrap:wrap; padding:0 0 18px; }
+  #view-practice .mode-bar { flex-direction:column; }
+  #view-practice .transcript-tools { padding:12px 0 0; }
+  #view-practice .transcript { height:clamp(180px,calc(100dvh - 520px),700px); }
+  #view-practice .reader-nav { margin-top:16px; }
+  #view-practice .panel-foot { grid-column:1/-1; flex-wrap:wrap; padding:0; }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f9fb"><title>不听听力</title>
+  <link rel="icon" href="./icon.svg"><link rel="stylesheet" href="./styles.css">
+</head>
+<body class="home-view">
+<div id="home-backdrop" class="home-backdrop" aria-hidden="true"></div>
+<main>
+  <header class="topbar"><button id="back-home" class="icon-button back-home" data-go="home" aria-label="回到首页">‹</button><a class="brand" href="#home">不听听力</a><span id="ui-date" class="date-label" hidden></span><button id="open-import" class="icon-button import-button" aria-label="导入资料">＋</button><button id="home-wallpaper" class="icon-button wallpaper-top" aria-label="自定义首页壁纸"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5"/><path d="m4 17 5-5 4 4 3-3 5 5"/></svg></button><span id="crumb" hidden>学习</span></header>
+  <section id="view-home" class="view home-stage">
+    <div class="home-check-area"><button id="home-checkin" class="checkin-tile" aria-label="今日签到，查看签到记录"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18M7 14h.01M12 14h.01M17 14h.01M7 17h.01M12 17h.01"/></svg><strong id="home-checkin-label">签到</strong><span id="home-checkin-date"></span></button></div>
+    <div class="home-bottom"><div class="home-actions"><button id="home-learn" class="home-action"><strong>Learn</strong></button><button id="home-review" class="home-action"><strong>Review</strong></button></div></div>
+  </section>
+  <section id="view-practice" class="view" hidden>
+    <div class="page-heading"><div><h1>精听</h1></div><div class="day-card" hidden><span>今日已听</span><strong id="today-minutes">0<small> 分钟</small></strong><div class="day-track"><i id="daily-fill"></i></div></div></div>
+    <section class="listening-panel">
+      <div class="practice-controls">
+      <div class="track-heading"><div><span id="track-badge" class="badge" hidden>六级真题</span><h2 id="track-title">正在加载真题</h2><p id="track-subtitle" hidden>内置原声 · 离线可用</p></div><button class="text-button change-track" data-go="library">换一套</button></div>
+      <div class="mode-bar" role="group" aria-label="练习模式"><button id="mode-transcript" class="active">原文对照</button><button id="mode-blind">只听声音</button><button id="mode-sentence">单句精听</button></div>
+      <div class="transcript-tools"><span id="sentence-count" hidden>完整原文</span><label class="switch"><input id="translation-toggle" type="checkbox" checked><span></span> 译文</label></div>
+      </div><div class="practice-reader">
+      <div class="reading-card"><div class="reader-top"><span id="reader-counter" aria-live="polite">01 / 40</span></div><div id="transcript" class="transcript"></div>
+        <div id="blind-panel" class="blind-panel" hidden><div class="sound-orb" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><button id="reveal" class="button light">查看原文</button></div>
+        <div id="no-transcript" class="empty" hidden><p>暂无原文</p><button id="add-transcript" class="button light">添加原文与译文</button></div>
+      </div>
+      <div id="reader-nav" class="reader-nav"><button id="reader-previous" class="button light">上一段</button><button id="reader-next" class="button">下一段 →</button></div>
+      </div>
+      <div class="panel-foot"><span id="mode-tip" hidden>完整原文 · 暂无逐句同步</span><button id="open-calibration" class="text-button">时间标记</button></div>
+    </section>
+  </section>
+  <section id="view-review" class="view" hidden>
+    <div class="page-heading"><div><h1>复习</h1></div></div>
+    <p id="review-source" class="quiet-note"></p>
+    <div class="reading-card review-card"><div class="reader-top"><span id="review-position">1 / 1</span></div><div class="review-content"><p id="review-text"></p><p id="review-translation" hidden></p></div></div>
+    <div class="review-controls"><button id="review-reveal" class="button light" aria-expanded="false">查看译文</button><button id="review-play" class="button light">播放原声</button></div>
+    <p id="review-note" class="quiet-note" hidden></p><button id="review-next" class="button review-next">下一段 →</button>
+  </section>
+  <section id="view-random" class="view" hidden>
+    <div class="page-heading"><div><h1>随听</h1></div></div>
+    <div class="random-settings"><label>抽句范围 <select id="random-scope"><option value="current">当前材料</option><option value="all">全部材料</option><option value="favorites">我的收藏</option></select></label><label class="switch"><input id="random-auto" type="checkbox"><span></span> 连续播放</label></div>
+    <section class="card random-card"><span class="badge" id="random-source"></span><div class="sound-orb" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h2 id="random-text"></h2><p id="random-translation"></p><div class="random-actions"><button id="random-reveal" class="button light">查看原文</button><button id="random-replay" class="button light">再听一遍</button><button id="random-next" class="button">随机一句</button></div><p class="quiet-note" id="random-note" role="status" hidden></p></section>
+  </section>
+  <section id="view-library" class="view" hidden>
+    <div class="page-heading"><div><h1>真题</h1></div><button id="library-import" class="button light small">＋ 导入</button></div>
+    <div class="library-filters"><label>年份 <select id="library-year"><option value="all">全部年份</option><option value="2026">2026年</option><option value="2025">2025年</option><option value="2024">2024年</option><option value="2023">2023年</option><option value="2022">2022年</option><option value="2021">2021年</option><option value="2020">2020年</option><option value="2019">2019年</option><option value="mine">我的导入</option></select></label><label>搜索 <input id="library-search" type="search" placeholder="年月、套卷" aria-label="搜索真题材料"></label></div>
+    <p id="library-count" class="library-count"></p><div id="library-list" class="library-grid"></div>
+    <a href="./credits.html" class="text-button material-credits">资料来源与许可</a>
+  </section>
+  <section id="view-progress" class="view" hidden>
+    <div class="page-heading"><div><span class="eyebrow">LITTLE BY LITTLE</span><h1>积累，正在发生。</h1><p>每一次认真听，都留在这里。</p></div></div>
+    <div class="stats-grid"><div class="card stat"><span>累计听力</span><strong id="total-minutes">0</strong><small>分钟</small></div><div class="card stat"><span>练习天数</span><strong id="practice-days">0</strong><small>天</small></div><div class="card stat"><span>收藏原文</span><strong id="favorite-count">0</strong><small>段</small></div></div>
+    <section class="card home-settings-card"><div><h2>我的签到</h2><p id="my-checkin-summary">累计0天 · 连续0天</p></div><button id="my-checkins" class="button light small">查看日历</button></section>
+    <h2 class="list-title">值得再听一次</h2><div id="favorites-list" class="card favorites-list"></div>
+    <section class="card settings-card"><h3>本机资料与备份</h3><p>内置真题离线可用。导入资料和练习记录保存在本机，卸载或清除应用数据会删除这些记录。</p><div class="settings-actions"><button id="export-track" class="button light">导出当前材料</button><button id="storage-persist" class="button light">保留离线资料</button></div><a href="./credits.html" class="text-button">资料说明 ↗</a></section>
+    <section class="card home-settings-card"><div><h2>首页壁纸</h2><p>换成你喜欢的风景。</p></div><button id="my-wallpaper" class="button light small">自定义</button></section>
+  </section>
+</main>
+<footer class="player" aria-label="音频播放器"><div class="player-title"><strong id="player-name">不听听力</strong><small id="player-status" role="status">准备播放</small></div><div class="player-options"><label><select id="speed" aria-label="播放速度"><option value="0.5">0.5× 慢听</option><option value="0.65">0.65×</option><option value="0.75">0.75×</option><option value="0.85">0.85×</option><option value="1" selected>1.0× 原速</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><button id="loop" class="icon-button loop-button" aria-pressed="false" title="单句循环">↻</button></div><div class="player-center"><div class="seek-row"><span id="elapsed">00:00</span><input id="seek" aria-label="播放进度" type="range" min="0" max="100" value="0" step="0.01"><span id="duration">00:00</span></div><div class="play-controls"><button id="previous" class="icon-button" aria-label="上一句" title="上一句">|◀</button><button id="rewind" class="icon-button" aria-label="后退5秒">↶<small>5</small></button><button id="play" class="play-button" aria-label="播放">▶</button><button id="forward" class="icon-button" aria-label="前进5秒">↷<small>5</small></button><button id="next" class="icon-button" aria-label="下一句" title="下一句">▶|</button></div></div></footer>
+<nav class="mobile-nav" aria-label="主要导航"><button data-view="random"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 3 0c5 0 7 12 12 12h3m-4-4 4 4-4 4M3 18h3c1.5 0 3-1.5 4-3m4-6c1-2 2.5-3 4-3h3m-4-4 4 4-4 4"/></svg><span>随听</span></button><button data-view="progress"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>我的</span></button></nav>
+<dialog id="import-dialog"><form id="import-form"><div class="dialog-title"><h2 id="import-heading">导入听力资料</h2><button type="button" class="close-dialog" aria-label="关闭">×</button></div><label>材料名称<input id="import-title" required maxlength="150" placeholder="例如：我的听力练习"></label><label id="audio-file-label">音频文件<input id="import-audio" type="file" accept="audio/*,.mp3,.m4a,.wav,.ogg,.aac"></label><details id="url-details"><summary>使用在线音频</summary><label>音频地址<input id="import-url" type="url" placeholder="https://…"></label></details><label>字幕或完整备份<input id="import-caption" type="file" accept=".txt,.lrc,.srt,.vtt,.json"></label><label>原文与译文<textarea id="import-text" rows="6" placeholder="English sentence. || 中文译文。"></textarea></label><details class="field-help"><summary>支持的格式</summary><p>TXT、LRC、SRT、VTT、JSON。单句播放需要时间标记。</p></details><p id="import-error" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="button light close-dialog">取消</button><button id="import-submit" type="submit" class="button">导入</button></div></form></dialog>
+<dialog id="calibration-dialog"><div class="dialog-title"><h2>标记原文时间</h2><button class="close-dialog" aria-label="关闭">×</button></div><p class="dialog-intro">播放录音，在段落开始时暂停并标记；下一段的开始可作为上一段的结束。</p><div class="calibration-player"><button id="calibration-play" class="button light">播放 / 暂停</button><strong id="calibration-clock">00:00</strong><button id="calibration-back" class="button light">后退5秒</button></div><div id="calibration-list"></div><p id="calibration-error" class="form-error" role="alert"></p><div class="dialog-actions"><button class="button light close-dialog">取消</button><button id="save-calibration" class="button">保存标记</button></div></dialog>
+<button id="install" hidden></button><button id="install-alt" hidden></button><dialog id="install-dialog"><button class="close-dialog">关闭</button></dialog><div id="toast" class="toast" role="status" hidden></div><audio id="audio" preload="metadata"></audio><script type="module" src="./app.js"></script>
+</body></html>

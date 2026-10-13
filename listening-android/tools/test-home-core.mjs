@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {dayKey,offsetDay,validCheckins,checkinSummary,calendarCells} from '../content/home-core.mjs';
+const date=(y,m,d)=>new Date(y,m-1,d,12);
+assert.equal(dayKey(offsetDay(date(2026,1,1),-1)),'2025-12-31');
+assert.equal(dayKey(offsetDay(date(2024,3,1),-1)),'2024-02-29');
+assert.deepEqual(validCheckins(['2026-10-12','2026-10-12','2026-02-30',null,'wrong']),['2026-10-12']);
+assert.deepEqual(checkinSummary(['2025-12-30','2025-12-31','2026-01-01'],date(2026,1,1)),{total:3,streak:3,signed:true});
+assert.deepEqual(checkinSummary(['2025-12-30','2025-12-31'],date(2026,1,1)),{total:2,streak:2,signed:false});
+assert.deepEqual(checkinSummary(['2025-12-30'],date(2026,1,1)),{total:1,streak:0,signed:false});
+assert.equal(calendarCells(2024,1).filter(Boolean).length,29);
+assert.equal(calendarCells(2026,1).filter(Boolean).length,28);
+assert.equal(calendarCells(2026,9)[0],null);
+assert.equal(calendarCells(2026,9)[3].key,'2026-10-01');
+console.log('PASS check-in deduplication, invalid date rejection, streaks across years, leap dates and Monday-first month grid');

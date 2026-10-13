@@ -1,0 +1,26 @@
+import {readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const dest=process.argv[2];if(!dest)throw Error('Asset output directory required');
+await mkdir(dest,{recursive:true});
+const read=name=>readFile(path.join(root,'content',name),'utf8');
+let html=(await read('app-shell.html')).replaceAll('\r\n','\n');
+html=html.replace(/  <section id="view-progress"[\s\S]*?\n  <\/section>(?=\n<\/main>)/,await read('study-panel.html'));
+html=html.replace('<dialog id="import-dialog">',(await read('home-dialogs.html'))+(await read('study-dialog.html'))+'<dialog id="import-dialog">');
+html=html.replace('</head>','<link rel="stylesheet" href="home.css"><link rel="stylesheet" href="study.css"><link rel="stylesheet" href="tablet.css"><link rel="stylesheet" href="refinement.css"><link rel="stylesheet" href="formal.css"><link rel="stylesheet" href="formal-v2.css"></head>');
+html=html.replace('导出当前材料','导出使用日志').replace('更换真题','更换资料');
+await writeFile(path.join(dest,'index.html'),html);
+let js=await readFile(path.join(root,'../listening-app/dist/app.js'),'utf8');
+js=js.replace(/init\(\)\.catch\(e=>\{setStatus\('加载失败'\);toast\(e.message\);\}\);\s*$/,'');
+js="import {dayKey,validCheckins,checkinSummary,calendarCells} from './home-core.js';\nimport {normalizeStudyPreferences,normalizeReviewHistory,studyMetrics} from './study-core.js';\n"+js;
+js+='\n'+await read('reader-ui.js')+'\n'+await read('home-ui.js')+'\n'+await read('study-ui.js')+'\n'+await read('practice-layout.js')+'\n'+await read('formal-ui.js');
+await writeFile(path.join(dest,'app.js'),js);
+for(const [from,to] of Object.entries({'mobile-ui.css':'styles.css','home-ui.css':'home.css','study-ui.css':'study.css','tablet-ui.css':'tablet.css','refinement.css':'refinement.css','formal-ui.css':'formal.css','formal-v2.css':'formal-v2.css','home-core.mjs':'home-core.js','study-core.mjs':'study-core.js','wallpaper-winter.svg':'wallpaper-winter.svg','app-icon.svg':'icon.svg'}))await copyFile(path.join(root,'content',from),path.join(dest,to));
+await copyFile(path.join(root,'../listening-app/dist/core.js'),path.join(dest,'core.js'));
+const repo=path.join(root,'../github'),catalog=JSON.parse(await readFile(path.join(repo,'catalog.json'),'utf8')),tracks=[];
+await mkdir(path.join(dest,'../metadata'),{recursive:true});
+for(const t of catalog.tracks){const raw=await readFile(path.join(repo,t.timings));const doc=JSON.parse(raw);tracks.push({id:t.id,title:t.name.replaceAll('_',' · '),type:'source',duration:t.duration,segments:doc.sentences.map(s=>({text:s.text,translation:s.translationScope==='sentence'?s.translation:'',start:s.start,end:s.end,id:s.id})),unit:'句'});await writeFile(path.join(dest,'../metadata',t.timingsSha256+'.json'),raw);}
+await writeFile(path.join(dest,'tracks.json'),JSON.stringify(tracks));
+await writeFile(path.join(dest,'credits.html'),`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>资料来源与许可</title><style>body{font:16px/1.8 sans-serif;padding:24px;max-width:760px;margin:auto;color:#343438;background:#f7f7f8}a{color:#bd642a}</style><a href="index.html">‹ 返回</a><h2>资料来源与许可</h2><p>不听听力 2.0.0</p><p>29 组六级真题录音、4507 句原文与时间标记。音频按需在线播放或保存到本机。</p><p>原始资料：<a href="https://github.com/Ysoseri1224/CET-6-Listening-10-Years-Resources-and-Analysis">Ysoseri1224 / CET-6-Listening-10-Years-Resources-and-Analysis</a>，<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。本应用进行了单句时间对齐与译文整理，机器译文可在练习页修正。</p><p>整理仓库：<a href="https://github.com/happypotato2024/buting-listening-resources">buting-listening-resources</a>。</p><p>本机识别：Whisper base.en / whisper.cpp 1.8.2。默认 Google 联网翻译仅发送英文文本，不发送录音。可选 Qwen2.5-1.5B-Instruct Q4_K_M 本机翻译，另需约 1.12 GB 模型。</p><a href="licenses.txt">开源许可全文</a></html>`);
+console.log('Formal UI and verified sentence metadata prepared.');

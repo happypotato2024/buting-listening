@@ -41,18 +41,18 @@
   },
   {
     "path": "docs/verification/package-checks.json",
-    "bytes": 458,
-    "sha256": "27ab57279856a33de69c4b5a384c3f58b5c0abcf2273c17f01f6556c389b4280"
+    "bytes": 440,
+    "sha256": "5dceaf7f31b65cfd42ce64605a5ab03fc9213c566c49e5bd4978204b0352d830"
   },
   {
     "path": "docs/verification/retry-checks.txt",
-    "bytes": 468,
-    "sha256": "f01c68d49ce85ef6d463e59e293a99d9306ba9da9712cbe9ba718e53d24b239c"
+    "bytes": 460,
+    "sha256": "8a0902a7eb913bc7ae9e59c23a704882faa18029a530de3d607c764a3086d006"
   },
   {
     "path": "docs/verification/upgrade-checks.txt",
-    "bytes": 153,
-    "sha256": "fa2166aa179261f2aac26d8bebdd50c6a9b8a4f34658d7c225f3248ab9e769e4"
+    "bytes": 150,
+    "sha256": "02d8dd6cb57f0152b4cda2b3f74faaf1b377c52dee9b09b73991daf93d55f192"
   },
   {
     "path": "docs/使用说明.md",
@@ -76,8 +76,8 @@
   },
   {
     "path": "docs/验证结果-v2.0.md",
-    "bytes": 2997,
-    "sha256": "a86587e830ada74a1bd32a7520bea3ca860b5f8ef1519f8156d4c1e0a1eeb5e7"
+    "bytes": 2962,
+    "sha256": "4273cf2e239303cd82077ffaaff899be83ea89ba37d831169d20ac3219fcf22e"
   },
   {
     "path": "licenses/APACHE-2.0.txt",
@@ -121,8 +121,8 @@
   },
   {
     "path": "listening-android/content/app-shell.html",
-    "bytes": 12334,
-    "sha256": "fd4c0b5e487c63972fa0829a3229bd768d397a1338940c729f3e152f40ca3881"
+    "bytes": 12269,
+    "sha256": "ffda73dc22161de5d2863c9948b2d8baca94dc50019b48eb4af28f4d75b00f2d"
   },
   {
     "path": "listening-android/content/formal-ui.css",
@@ -131,8 +131,8 @@
   },
   {
     "path": "listening-android/content/formal-ui.js",
-    "bytes": 20999,
-    "sha256": "589b20641e48e0832128c5619194e66ee1c3e06b62876d1c42c25ea63476e7aa"
+    "bytes": 20944,
+    "sha256": "f912042d45f2e56372a8c39d8259aae60d84a1a72bfb0346dcf0127fb758c114"
   },
   {
     "path": "listening-android/content/formal-v2.css",
@@ -146,28 +146,28 @@
   },
   {
     "path": "listening-android/content/home-dialogs.html",
-    "bytes": 2655,
-    "sha256": "974a99c5b0f1d0a9a95e67f5366df6e183a043344ee7f4b793a14575f3a5c1a0"
+    "bytes": 2639,
+    "sha256": "04627e5eb8c05773e72f9e4f5540befe96e78ac5d2bed07e0cef2c338a084ade"
   },
   {
     "path": "listening-android/content/home-ui.css",
-    "bytes": 8026,
-    "sha256": "1472cea9f9b5b4d0e8aff12e0876e53cbaa3dea0ef3c4f73d9ed101e28ef9936"
+    "bytes": 8019,
+    "sha256": "ca022408942db1ec0670d9de65b30ea7a666527f78f634a6f1614f062d56b51f"
   },
   {
     "path": "listening-android/content/home-ui.js",
-    "bytes": 16721,
-    "sha256": "98a7496f741efdb6e8da748f1af6d52ce91d932146e2c755120e0f253c181c3e"
+    "bytes": 16555,
+    "sha256": "44bbfc80b9e82de4a6ed77380f78f1923f4f55a0492415ef2d9a47ff6ce0f43a"
   },
   {
     "path": "listening-android/content/library-ui.js",
-    "bytes": 1154,
-    "sha256": "07ba3175f0170f290db935c77fb3ae5b80725bf3ed57fb044ce5c6a2c5bcaf91"
+    "bytes": 1144,
+    "sha256": "b264fede2799523c90b66046b411a684a5614ffce7c7d974c5b073ebb3b93957"
   },
   {
     "path": "listening-android/content/mobile-ui.css",
-    "bytes": 16707,
-    "sha256": "ce2a6c633e11172490264fc071ee9826c5eff503311589ca3c6279e571eecae1"
+    "bytes": 16700,
+    "sha256": "c6c0cf7750cff0d5a437539647caff4a5d41b7d2b2d87e6557742a973d959483"
   },
   {
     "path": "listening-android/content/playback-ui.js",
@@ -186,8 +186,8 @@
   },
   {
     "path": "listening-android/content/refinement.css",
-    "bytes": 7602,
-    "sha256": "328cded5393645667b7f9a152598dab6494d8e9fe6df5aaec6758aafd2a093ce"
+    "bytes": 7535,
+    "sha256": "09b159a3257922ddf48fe60ce31e4d4491ac3e0a68efcd0bf720f2384a261563"
   },
   {
     "path": "listening-android/content/sentence-ui.js",
@@ -201,23 +201,23 @@
   },
   {
     "path": "listening-android/content/study-dialog.html",
-    "bytes": 737,
-    "sha256": "c9107c5193424307ab43478ac10d5c7312db9c24e565406843fd6a6da0856d4b"
+    "bytes": 736,
+    "sha256": "0d36afdec6ec7ac5fa6dac35277c7e034b0ce392409d79525ff81ddd9ec88edd"
   },
   {
     "path": "listening-android/content/study-panel.html",
-    "bytes": 5839,
-    "sha256": "4ee670b2d490b687c54419a677c8a6098a7a40db4f78d567ab990de8bd7d4d95"
+    "bytes": 5819,
+    "sha256": "a41f7728943d8ba10ff2f1dc62f73c65876aab2a55bede137707f2ca4831f678"
   },
   {
     "path": "listening-android/content/study-ui.css",
-    "bytes": 6699,
-    "sha256": "653b40fbf003662920262e240600db152a79217c06aa6918a80b89191e7f2a09"
+    "bytes": 6694,
+    "sha256": "45b7610141ba4fe3baed851c3e9b349cd17a05e0cb267b20a56020057b795e37"
   },
   {
     "path": "listening-android/content/study-ui.js",
-    "bytes": 6408,
-    "sha256": "71ab60b456849fd9866345e4dc7b5ad680495226e52ab0e1a306f3fdf99b02b9"
+    "bytes": 6352,
+    "sha256": "2fcb61065087b441202fbcdb036437005f99a64c9ab0cf94b852000d5df2a917"
   },
   {
     "path": "listening-android/content/tablet-ui.css",
@@ -231,13 +231,13 @@
   },
   {
     "path": "listening-android/README-v1.10.md",
-    "bytes": 5714,
-    "sha256": "21bd6c1da6a8f32a2010abb2fc6bf0bad9255c85f3cc1912a85925687d5e3adb"
+    "bytes": 5666,
+    "sha256": "182149bce571dc33a85eccadb343939eea3799e9fa3bc6075da10f59ce0ff803"
   },
   {
     "path": "listening-android/README.md",
-    "bytes": 471,
-    "sha256": "e2970c9185e5799bbbfeeb073967dc266999f0c695216e22e0407dc6e1b59395"
+    "bytes": 464,
+    "sha256": "189e050cfc3a4615ad9fdd053b7ad8fa27b00fe10bd4f285da81f3676ba33868"
   },
   {
     "path": "listening-android/res/drawable/app_icon.png",
@@ -261,13 +261,13 @@
   },
   {
     "path": "listening-android/src/MainActivity.java",
-    "bytes": 23399,
-    "sha256": "a6ea957430ab96b15447ec95101ccff68f44e94832079e9f5770d8b510efa1b1"
+    "bytes": 23048,
+    "sha256": "c5cc7afe4dca2c957628f0dfd2c54971030d655b87db325fc0f1de12af3baf1c"
   },
   {
     "path": "listening-android/src/NativeListening.java",
-    "bytes": 10686,
-    "sha256": "d6f4abf9e3242d9fc36c0b8c8a0b2ed4ec2ef4c77525edaa5910e72ffca8c51f"
+    "bytes": 10627,
+    "sha256": "f82a225bc4acbf80e607733150191d352a7dc7576ea5341d206e91f698fda314"
   },
   {
     "path": "listening-android/tools/build-formal-checks.py",
@@ -276,23 +276,23 @@
   },
   {
     "path": "listening-android/tools/build-formal.py",
-    "bytes": 8632,
-    "sha256": "a6ed45712aa204b0fbe5db9d489104b72386a76135283fe98773090ba0e3ab13"
+    "bytes": 8551,
+    "sha256": "77561bbb5b232f255f36a7644e99f5b986894a65556ba49fdfddad7b99f8bea1"
   },
   {
     "path": "listening-android/tools/FormalChecks.java",
-    "bytes": 13219,
-    "sha256": "24b062c537e002c272a24ac9e708e0115b1d11d31ad35d1a283a9c9d38aade15"
+    "bytes": 13165,
+    "sha256": "7b745c883b787f670c0d9d4724bbcf28df9aa98824d5cb0f5b92207ccf8d4659"
   },
   {
     "path": "listening-android/tools/make-formal-icon.py",
-    "bytes": 2041,
-    "sha256": "8040a7af2f62e9b01c84e1904cdaaf2d8fc785fe36de609919933e41e85ccc3a"
+    "bytes": 2014,
+    "sha256": "98b0863e4241c6bd3fe60ed90eee6643142b02bb2bf1750f92f36c0772f2e3a2"
   },
   {
     "path": "listening-android/tools/prepare-formal.mjs",
-    "bytes": 4348,
-    "sha256": "59d53ce67e7469cc73a228c4b243c81fb01cb635e9516d24228d1cfe5a487a10"
+    "bytes": 4322,
+    "sha256": "c92353a1791b8fcbd774eff23506d443e757f6efdab09efd55ee8956897c8e44"
   },
   {
     "path": "listening-android/tools/test-home-core.mjs",
@@ -306,13 +306,13 @@
   },
   {
     "path": "listening-android/tools/verify-formal.py",
-    "bytes": 3119,
-    "sha256": "c7b79eed4304acf99be16e652eed2d655f7ca0579346fdf0c3f9d46ebe98c7bf"
+    "bytes": 3083,
+    "sha256": "ce83fa08554359a8d29f473a0163b03acf981f844e294012a9221362650da22e"
   },
   {
     "path": "listening-app/dist/app.js",
-    "bytes": 28478,
-    "sha256": "2c173f26c07d807296cb14178b5ca4a48691d119ea18b4f869c2d2523ec2c21d"
+    "bytes": 28304,
+    "sha256": "5b13cc40d89156354985bee6e802df6af9aea0b1d0f6b52b48585c17bfc03c98"
   },
   {
     "path": "listening-app/dist/core.js",
@@ -326,8 +326,8 @@
   },
   {
     "path": "listening-lab/assets/library.json",
-    "bytes": 15743,
-    "sha256": "b69856d0bd1de1602eb777d62c3fb990d360a7d9ada2791bddb2aea65ce187f5"
+    "bytes": 15447,
+    "sha256": "8974b0c224b8273237562ccff1d2c44b9493d88a03b50f52e732253efebffbc5"
   },
   {
     "path": "listening-lab/assets/OPENAI-WHISPER-LICENSE.txt",
@@ -336,8 +336,8 @@
   },
   {
     "path": "listening-lab/assets/repository.json",
-    "bytes": 31985,
-    "sha256": "b9c2995f402270bcff6c9e2212ca65ba9f68804ed28cc37b4ac3740be3c80fbc"
+    "bytes": 31392,
+    "sha256": "b2cb48b3afb07fbe0d97929ba70fcbf2a814230b3f7b61af4f873c28c17bcfda"
   },
   {
     "path": "listening-lab/native/CMakeLists.txt",
@@ -371,8 +371,8 @@
   },
   {
     "path": "listening-lab/src/Diagnostics.java",
-    "bytes": 4507,
-    "sha256": "8b4eaf41fe657d8539c44babe0802e04526758b6e5ce68b5c168c7e42d732316"
+    "bytes": 4464,
+    "sha256": "86f1f5663d3a4d05b0a8298ce5821fc19c04c674e4c77e52a7a9657b2e96a8c4"
   },
   {
     "path": "listening-lab/src/LabApp.java",
@@ -381,13 +381,13 @@
   },
   {
     "path": "listening-lab/src/LibraryService.java",
-    "bytes": 7187,
-    "sha256": "01409a2c000c52cbeff2591a98230e8cba0afb4c139d9efb7276e83e27efdb5f"
+    "bytes": 7140,
+    "sha256": "fcf792ba77de014e17c473d5b741507ab22442df4627ff0cbfab0c01dbc1edb6"
   },
   {
     "path": "listening-lab/src/MainActivity.java",
-    "bytes": 39911,
-    "sha256": "c1016f89a176cb475107a75be2fbb5029122c1d78cb5307fce212138ce7efc4f"
+    "bytes": 39751,
+    "sha256": "44618773e78ef2efb2e23d7b9ca24d058b5ba992394f8344b86194bba12ce281"
   },
   {
     "path": "listening-lab/src/Models.java",
@@ -406,33 +406,33 @@
   },
   {
     "path": "listening-lab/src/PlaybackService.java",
-    "bytes": 15640,
-    "sha256": "b2031cd7ce209c5fe98049820087e44dd4c5109a4d3b33764b6df4fa9c1d353b"
+    "bytes": 15525,
+    "sha256": "0c69917e08f794ec9883c4a84c1f81919272f22d7fb9e4cf3af4316cd0e2958c"
   },
   {
     "path": "listening-lab/src/PrecisePlayer.java",
-    "bytes": 5622,
-    "sha256": "88067fc6ff832dd5e297918f4ee71944c991c7222a1e64011e94e3ff4638a416"
+    "bytes": 5582,
+    "sha256": "b737d8c54f29842633a6e5473a396bdbfb7ae189194d421eecad9ec4a3e538bf"
   },
   {
     "path": "listening-lab/src/ProcessingService.java",
-    "bytes": 16016,
-    "sha256": "8e91834472b0fb316cc625ad27a03b8206f9c8004303e155271e47e70e13b0ed"
+    "bytes": 15923,
+    "sha256": "dba52ffcff0e7027b71db204a29333d18d17a8ef7873cb12186cecbb35a04336"
   },
   {
     "path": "listening-lab/src/RangeDecoder.java",
-    "bytes": 7222,
-    "sha256": "602d38bd82c9878bded510428dd8aa2db9e1344494ca133f96d46cc078638c5b"
+    "bytes": 7187,
+    "sha256": "0364254364578c84a28346c8e18e6f34672d3379fefc6feda30580c2ecebe64a"
   },
   {
     "path": "listening-lab/src/RemoteAudioSource.java",
-    "bytes": 6447,
-    "sha256": "90596be2eebadc56fb07ea0952ee107a5d4256143b21ce3158502a8de4ba9d05"
+    "bytes": 6403,
+    "sha256": "6a7b86d141d7a8ab3ba18fbe6b40aeb7a55a0853997716d6e1ab3f6003a24000"
   },
   {
     "path": "listening-lab/src/Repository.java",
-    "bytes": 8919,
-    "sha256": "3809d9ede296aff0f3d8c523b614183b6ded9ddd156e90177985c1fb1512cbae"
+    "bytes": 8868,
+    "sha256": "3b77137dd9b57c404707c5a154d88f8e44a3dc97fe8cbec6a252596522281667"
   },
   {
     "path": "listening-lab/src/Sentences.java",
@@ -441,13 +441,13 @@
   },
   {
     "path": "listening-lab/src/Store.java",
-    "bytes": 2492,
-    "sha256": "89f73fce798800cabc33e2d578af1b1332502327ceb6a0e3bce3eb94753618ff"
+    "bytes": 2472,
+    "sha256": "f0da89c0a30960945cc263fd54de4305031ebb10a0e08c0bc7978af97f906dc5"
   },
   {
     "path": "listening-lab/src/ThermalGovernor.java",
-    "bytes": 4352,
-    "sha256": "05a0c79a49bf3d3fe688f769fcc5068e91c457a1810d17f48987b7eff5657cf4"
+    "bytes": 4306,
+    "sha256": "7955db938f738475d0995f2be63ac9a232a1e36772ad2354ea3193fe865a242d"
   },
   {
     "path": "listening-lab/src/TranslationEngine.java",
@@ -466,8 +466,8 @@
   },
   {
     "path": "listening-lab/tools/qa-repository-build.py",
-    "bytes": 2033,
-    "sha256": "e045c63d72660560fdfb3834eaf2685966781556c1e96a624a987e3139b7de65"
+    "bytes": 2016,
+    "sha256": "9b77fb8f9e41bf740299fade15aefcbf5db39857a9a27e6d9e56cb60824cbc0c"
   },
   {
     "path": "README.md",
